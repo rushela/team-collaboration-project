@@ -14,4 +14,4 @@
 |Database	                 |  MongoDB (Atlas Cloud)                     |
 |Authentication & Security |  JWT (JSON Web Tokens), bcrypt.js (hashing)|
 |OTP & Password Reset	     |  NodeMailer (Email), OTP Generator         |
-|--------------------------|--------------------------------------------|
+
