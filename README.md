@@ -5,7 +5,7 @@ in this part has User Management part of Team-Collaborate -project it includes
 3.Admin Dashboard - View Users' details and their work progress and their tasks. |
 4.User Dashboard - View their daily tasks given by Company. |
 5.User Management - Admin Can Edit/Update User details  and suspend users'account If User do some unapprpriate things. |
-6.Forget Password -  after enter the Email and get an OTP to Reset Password. |
+6.Forget Password -  after enter the Email and get an OTP to Reset Password. 
 
 
 •	express – For building REST APIs.
