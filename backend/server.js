@@ -1,34 +1,41 @@
-const express = require('express');
+// server.js
+require('dotenv').config();
+const express  = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
+const cors     = require('cors');
 
-dotenv.config();
 const app = express();
 
+// global middleware
 app.use(express.json());
 app.use(cors());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URL)
+// 1️⃣ Connect to MongoDB
+mongoose
+  .connect(process.env.MONGODB_URL)
   .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log('MongoDB connection error:', err));
+  .catch(err => console.error('MongoDB connection error:', err));
 
-// Import auth route here (EXACTLY THIS)
-const authRoutes = require('./routes/auth');
-app.use('/api/auth', authRoutes);
+// 2️⃣ Mount your routers
+const authRoutes    = require('./routes/auth');
+const adminRoutes   = require('./routes/admin');
+// remove any bad require('./routes/User') here!
 
-// Admin route
-const adminRoutes = require('./routes/admin');
+// ← NEW: import your support route
+const supportRoutes = require('./routes/support');
+
+app.use('/api/auth',  authRoutes);
 app.use('/api/admin', adminRoutes);
 
+// ← NEW: mount it under /api/support
+app.use('/api/support', supportRoutes);
 
-// Basic route for testing
+// 3️⃣ Health-check endpoint
 app.get('/', (req, res) => {
   res.send('Server running successfully!');
 });
 
-// Start server
+// 4️⃣ Start listening
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
