@@ -8,33 +8,33 @@ Team-Collaborate lets organizations onboard users, assign tasks, monitor progres
 🚀**Features**
 ----------------------------------------------------------------------------------
 #**Sign Up**
--**New users register by providing name, email, company ID and password.*
--**Credentials securely stored in MongoDB.*
+*New users register by providing name, email, company ID and password.*
+*Credentials securely stored in MongoDB.*
 
 #**Login & Authentication**
--#**Users log in with email or company ID + password.*
--#Access granted via JSON Web Tokens (JWT).*
+*Users log in with email or company ID + password.*
+*Access granted via JSON Web Tokens (JWT).*
 
 #**AI Support Assistant**
--#*A chat widget on the Login page lets users ask questions or report issues in real time.*
--#*Built with OpenAI’s API—messages are sent to your /api/support endpoint and answered instantly*.
--#*Admin-defined fallback replies for common problems (e.g. account lockouts).*
+*A chat widget on the Login page lets users ask questions or report issues in real time.*
+*Built with OpenAI’s API—messages are sent to your /api/support endpoint and answered instantly*.
+*Admin-defined fallback replies for common problems (e.g. account lockouts).*
 
 #**Admin Dashboard**
--#*View all registered users, their roles and activity history.*
--#*Track each user’s task progress in real time.*
+*View all registered users, their roles and activity history.*
+*Track each user’s task progress in real time.*
 
 #**User Dashboard**
--#*Each user sees their own daily tasks, deadlines, and completion status.*
+*Each user sees their own daily tasks, deadlines, and completion status.*
 
 #**User Management**
--#*Admins can edit user profiles, change roles, reset passwords or suspend accounts.*
+*Admins can edit user profiles, change roles, reset passwords or suspend accounts.*
 
 #**Password Reset & OTP**
--#*“Forgot Password” flow sends a one-time code via email or SMS.*
--#*Users verify the OTP and set a new password.*
+*“Forgot Password” flow sends a one-time code via email or SMS.*
+*Users verify the OTP and set a new password.*
 
-
+----------------------------------------------------------------------------------------
 
 |Features	                 |  Technologies clearly used                      |
 |------------------------- |-------------------------------------------------|
@@ -46,6 +46,7 @@ Team-Collaborate lets organizations onboard users, assign tasks, monitor progres
 |AI Support Assistant	     |  OpenAI SDK · axios · custom /api/support route |
 |Configuration             |  dotenv (env vars) · CORS                       | 
 
+---------------------------------------------------------------------------------
 ##**⚙️ Getting Started**
 ###Clone the repo
 
@@ -57,7 +58,6 @@ git clone https://github.com/your-username/team-collaborate.git
 cd team-collaborate
 
 bash
-Copy code
 cd backend
 npm install
 cp .env.example .env
@@ -66,15 +66,14 @@ npm run start
 Frontend setup
 
 bash
-Copy code
 cd ../frontend
 npm install
 cp .env.example .env
 # Set REACT_APP_API_URL to your backend URL (e.g. http://localhost:5000/api)
 npm start
 ```
-
-#Use the App
+-----------------------------------------------------------------------------
+##Use the App
 
 #Sign up as a new user, then log in.
 #If you sign up as an admin (or update your role in the database), you’ll see the Admin Dashboard.
