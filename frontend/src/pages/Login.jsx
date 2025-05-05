@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import SupportChat from "../components/SupportChat";
 
 const Login = () => {
   const [formData, setFormData] = useState({ identifier: "", password: "" });
@@ -66,47 +67,68 @@ const Login = () => {
   };
 
   return (
-    <Box maxW="400px" mx="auto" mt={10} p={6} borderRadius="lg" boxShadow="lg" bg="white">
-      <Heading textAlign="center" mb={6} color="blue.600">
-        Login
-      </Heading>
-      <VStack spacing={4} as="form" onSubmit={handleSubmit}>
-        <FormControl isRequired>
-          <FormLabel>Email / Company ID</FormLabel>
-          <Input
-            name="identifier"
-            value={formData.identifier}
-            onChange={handleChange}
-            placeholder="Enter your email or company ID"
-          />
-        </FormControl>
-        <FormControl isRequired>
-          <FormLabel>Password</FormLabel>
-          <Input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="Enter your password"
-          />
-        </FormControl>
-        <Button colorScheme="blue" type="submit" width="full">
+    <>
+      <Box
+        maxW="400px"
+        mx="auto"
+        mt={10}
+        p={6}
+        borderRadius="lg"
+        boxShadow="lg"
+        bg="white"
+      >
+        <Heading textAlign="center" mb={6} color="blue.600">
           Login
-        </Button>
-        <Text fontSize="sm" color="gray.600">
-          Forgot password?{" "}
-          <Button variant="link" colorScheme="blue" onClick={() => navigate("/forgot-password")}>
-            Reset here
+        </Heading>
+        <VStack spacing={4} as="form" onSubmit={handleSubmit}>
+          <FormControl isRequired>
+            <FormLabel>Email / Company ID</FormLabel>
+            <Input
+              name="identifier"
+              value={formData.identifier}
+              onChange={handleChange}
+              placeholder="Enter your email or company ID"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Password</FormLabel>
+            <Input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+            />
+          </FormControl>
+          <Button colorScheme="blue" type="submit" width="full">
+            Login
           </Button>
-        </Text>
-        <Text fontSize="sm" color="gray.600">
-          Don't have an account?{" "}
-          <Button variant="link" colorScheme="blue" onClick={() => navigate("/")}>
-            Sign Up
-          </Button>
-        </Text>
-      </VStack>
-    </Box>
+          <Text fontSize="sm" color="gray.600">
+            Forgot password?{' '}
+            <Button
+              variant="link"
+              colorScheme="blue"
+              onClick={() => navigate("/forgot-password")}
+            >
+              Reset here
+            </Button>
+          </Text>
+          <Text fontSize="sm" color="gray.600">
+            Don't have an account?{' '}
+            <Button
+              variant="link"
+              colorScheme="blue"
+              onClick={() => navigate("/")}
+            >
+              Sign Up
+            </Button>
+          </Text>
+        </VStack>
+      </Box>
+
+      {/* Support Chat Widget */}
+      <SupportChat />
+    </>
   );
 };
 
