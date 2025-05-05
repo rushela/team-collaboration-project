@@ -2,9 +2,11 @@
 A lightweight, full-stack collaboration platform for task and user management.
 
 ##Overview
+------------------------------------------------------------------------------------
 Team-Collaborate lets organizations onboard users, assign tasks, monitor progress and manage accounts—all through a clean REST API and a React-powered frontend. Admins have a dedicated dashboard to view and manage every user’s profile, tasks, and status, while regular users see only their own task list and progress.
 
 🚀**Features**
+----------------------------------------------------------------------------------
 #**Sign Up**
 -#**New users register by providing name, email, company ID and password.*
 -#**Credentials securely stored in MongoDB.*
