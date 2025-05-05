@@ -8,8 +8,8 @@ Team-Collaborate lets organizations onboard users, assign tasks, monitor progres
 🚀**Features**
 ----------------------------------------------------------------------------------
 #**Sign Up**
--#**New users register by providing name, email, company ID and password.*
--#**Credentials securely stored in MongoDB.*
+-**New users register by providing name, email, company ID and password.*
+-**Credentials securely stored in MongoDB.*
 
 #**Login & Authentication**
 -#**Users log in with email or company ID + password.*
